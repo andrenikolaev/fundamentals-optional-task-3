@@ -1,5 +1,6 @@
 package nikolaev.training.fundamentals;
 
+
 import java.util.*;
 
 
@@ -15,18 +16,14 @@ public class App
     public static void main( String[] args )
     {
         Scanner in = new Scanner(System.in);
-        int num;
-        boolean correctNumber = false;
+        int num =0;
+        System.out.print("Input a number: ");
 
-        while (!correctNumber){
-            System.out.print("Input a number: ");
+        num = in.nextInt();
+
+        while (num>12 || num<1){
+            System.out.print("Your number is not correct! \nInput a number: ");
             num = in.nextInt();
-            if (num>=1 && num<=12){
-                System.out.println("Your number is correct: " + num);
-                correctNumber = true;
-            } else {
-                System.out.println("Your number is not correct: " + num);
-            }
         }
 
         in.close();
